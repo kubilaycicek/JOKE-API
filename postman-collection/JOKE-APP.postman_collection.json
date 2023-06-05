@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "29d0bb35-94de-42ce-a9f1-541f77cc533d",
+		"name": "JOKE-APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/joke-app/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke-app",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRandomJoke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/joke-app/random-joke",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke-app",
+						"random-joke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRandomJokeByCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"ANIMAL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/joke-app/random-joke-by-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke-app",
+						"random-joke-by-category"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

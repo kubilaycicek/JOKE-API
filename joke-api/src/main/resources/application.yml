@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: JokeApp
+
+server:
+  port: 8080
+
+cache:
+  list:
+    earthQuakeListTTL: 43200000
