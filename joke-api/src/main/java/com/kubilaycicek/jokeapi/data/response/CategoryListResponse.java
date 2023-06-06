@@ -1,6 +1,6 @@
-package com.kubilaycicek.jokeapi.response;
+package com.kubilaycicek.jokeapi.data.response;
 
-import com.kubilaycicek.jokeapi.dto.Category;
+import com.kubilaycicek.jokeapi.data.dto.Category;
 
 import java.util.List;
 

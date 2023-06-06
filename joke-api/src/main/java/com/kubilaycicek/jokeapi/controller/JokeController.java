@@ -1,8 +1,9 @@
 package com.kubilaycicek.jokeapi.controller;
 
-import com.kubilaycicek.jokeapi.request.JokeRequest;
-import com.kubilaycicek.jokeapi.response.CategoryListResponse;
-import com.kubilaycicek.jokeapi.response.JokeResponse;
+
+import com.kubilaycicek.jokeapi.data.request.JokeRequest;
+import com.kubilaycicek.jokeapi.data.response.CategoryListResponse;
+import com.kubilaycicek.jokeapi.data.response.JokeResponse;
 import com.kubilaycicek.jokeapi.service.JokeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,6 @@ public class JokeController {
 
     @GetMapping("random-joke-by-category")
     public ResponseEntity<JokeResponse> getRandomJokeByCategory(@RequestBody JokeRequest request) {
-        return new ResponseEntity<>(new JokeResponse(jokeService.getRandomJoke().value()), HttpStatus.OK);
+        return new ResponseEntity<>(new JokeResponse(jokeService.getRandomJokeByCategory(request.category()).value()), HttpStatus.OK);
     }
 }

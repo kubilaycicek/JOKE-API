@@ -1,8 +1,8 @@
 package com.kubilaycicek.jokeapi.service;
 
 import com.kubilaycicek.jokeapi.constants.JokeApiConstant;
-import com.kubilaycicek.jokeapi.dto.Category;
-import com.kubilaycicek.jokeapi.dto.JokeDto;
+import com.kubilaycicek.jokeapi.data.dto.Category;
+import com.kubilaycicek.jokeapi.data.dto.JokeDto;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -29,7 +29,7 @@ public class JokeServiceImpl implements JokeService {
 
     @Override
     public JokeDto getRandomJokeByCategory(String category) {
-        return restTemplate.getForEntity(JokeApiConstant.JOKE_API_URL, JokeDto.class).getBody();
+        return restTemplate.getForEntity(JokeApiConstant.CATEGORY_URL + category, JokeDto.class).getBody();
     }
 
 }

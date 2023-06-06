@@ -1,4 +1,4 @@
-package com.kubilaycicek.jokeapi.dto;
+package com.kubilaycicek.jokeapi.data.dto;
 
 public enum Category {
     ANIMAL(0), CAREER(1), CELEBRITY(2), DEV(3), EXPLICIT(4),
