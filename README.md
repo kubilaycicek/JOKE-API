@@ -1,4 +1,7 @@
 # Joke API
+I used the resource api. This api generates the Chuck NORRIS's jokes. Also I added the postman collection.
+
+# Used Technologies
  * Java 17
  * Spring Boot 3.1.0
 
